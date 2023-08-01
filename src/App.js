@@ -5,16 +5,14 @@ import Authentication from "./components/routes/authentication/Authentication";
 import Shop from "./components/routes/shop/Shop";
 import Checkout from "./components/routes/checkout/Checkout";
 
-<Shop />;
-
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/auth" element={<Authentication />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="shop/*" element={<Shop />} />
+        <Route path="auth" element={<Authentication />} />
+        <Route path="checkout" element={<Checkout />} />
       </Route>
     </Routes>
   );
